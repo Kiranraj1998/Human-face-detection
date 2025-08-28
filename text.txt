@@ -1,0 +1,16 @@
+1.data_preprocessing - faces_cleaned.csv
+2.exploratory_data_analysis.py - eda_plots
+3.feature.py- features.npy
+4.generate_labels.py- labels.npy
+5.train_test_split.py-x_test-y_train
+6.model_selection.py- yolo5su.pt
+(data.yaml)
+train_model.py- runs
+convert_to_labels - labels
+evaluate.py - evaluation_results.json
+deploy_model.- annotated.mp4
+hyp_evolve.py-yolov5  xxxx
+yolov5.yaml
+export_model.py
+test_onxx.py - onnx_resukt
+streamlit.py
