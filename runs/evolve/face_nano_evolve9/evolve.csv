@@ -1,0 +1,2 @@
+precision,recall,map50,map,box_loss,obj_loss,cls_loss,lr0,lrf,momentum,weight_decay,warmup_epochs,warmup_momentum,warmup_bias_lr,box,cls,cls_pw,obj,obj_pw,iou_t,anchor_t,fl_gamma,hsv_h,hsv_s,hsv_v,degrees,translate,scale,shear,perspective,flipud,fliplr,mosaic,mixup,copy_paste,anchors
+0.7409235408000868,0.8611615245009074,0.8634377092377238,0.4137063107798687,0.03714948147535324,0.006827188190072775,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
