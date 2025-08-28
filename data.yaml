@@ -1,0 +1,7 @@
+path: C:/Guvi/my-project/test-final-project
+train: images/images
+val: images/images
+nc: 1
+names: ['face']
+
+
