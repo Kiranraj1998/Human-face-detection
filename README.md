@@ -1,10 +1,9 @@
-<img width="1486" height="918" alt="image" src="https://github.com/user-attachments/assets/bc848b24-6b7f-4eac-afa1-7ed645309b68" /># Human-face-detection
 
-Objective:
+**Objective:**
 
 Build a lightweight, CPU-friendly human face detection system that goes end-to-end—from data prep to real-time deployment—using Ultralytics/YOLO.
 
-This project has two parts:
+**This project has two parts:**
 
 **1.Computer Vision** — Train, evaluate, export and deploy a YOLOv5n face detector (Ultralytics).
 
