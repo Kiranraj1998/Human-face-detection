@@ -1,4 +1,4 @@
-# Human-face-detection
+<img width="1486" height="918" alt="image" src="https://github.com/user-attachments/assets/bc848b24-6b7f-4eac-afa1-7ed645309b68" /># Human-face-detection
 
 Objective:
 
@@ -10,24 +10,65 @@ This project has two parts:
 
 **2.Streamlit App (Tabular ML)** — A general machine-learning app for any CSV: Data view, EDA, Train/Evaluate, and single-row Prediction.
 
-**Folder layout:**
+**Run a Code:**
 
-test-final-project/
-├─ app.py                         # Streamlit app (do NOT name this streamlit.py)
-├─ data.yaml                      # YOLO dataset config
-├─ train_model.py                 # Train YOLO
-├─ evaluate.py                    # Evaluate YOLO
-├─ deploy_model.py                # Run on webcam/video
-├─ export_model.py                # Export ONNX/TorchScript
-├─ test_onnx.py                   # Quick ONNX smoke test
-├─ convert_to_labels.py           # (if used) make YOLO txt labels from CSV
-├─ images/
-│  └─ images/                     # .jpg/.png images
-├─ labels/
-│  └─ images/                     # YOLO *.txt labels (one per image)
-└─ runs/                          # Ultralytics training/val/exports
 
-YOLO expects images/ and labels/ at the same level, with the same subfolder names (e.g. images/images and labels/images).
+**1. Data Preprocessing**
+python scripts/data_preprocessing.py
+	It will clean and give a proper formatted data to a model – faces_cleaned.csv
+
+**2. Exploratory_data_analysis**
+python scripts/exploratory_data_analysis.py
+	Will do EDA for the csv file and give eda plots
+
+**3. Feature selection**
+python scripts/feature.py
+	Will select feature and will return feature.npy
+
+**4. generate_labels**
+python scripts/generate_labels.py
+	helps to generate labels for all images – labels.npy
+
+**5.Train test split**
+Python scripts/ train_test_split.py
+	will train and test the model and will return x_test and y_train
+
+**6.Model selection**
+python scripts/model_selection.py
+	helps to choose the model – yolov5n.pt
+
+**7. Train model**
+python scripts/train_model.py
+	Will train the model - runs
+
+**8. Convert to labels**
+python scripts/convert_to_labels.py
+	will convert to labels - labels
+
+**9.Evaluate**
+python scripts/evaluate.py
+	Will do the evaluation and will give results – evaluation_results
+
+**10. Deploy model**
+Python scripts/ deploy_model.py
+	Will deploy the evaluated model – annotated_mp4
+
+**11.Hyperparameter evolve**
+python scripts/hyp_evolve.py
+	Will create yolov5 model – yolov5.yaml
+
+**12.Export model**
+python scripts/export_model.py
+	will export the trained model
+
+**13. Test onnx**
+python scripts/test_onnx.py
+	Will test and returns Onnx-results
+
+**14.Streamlit**
+python scripts/app.py
+	To push the project to streamlit dashboard
+
 
 **📁 Dataset (YOLO)**
 
@@ -110,22 +151,6 @@ The Streamlit app is generic — it works on any CSV. It provides:
 **Train / Evaluate:**
 
 Target column selection
-
-**Auto-detects task:** binary / multiclass / regression
-
-**Binary:** choose Positive class label (maps to 1)
-
-**Safe split:** tries stratified; if a class is too small, falls back safely with a warning
-
-Pipelines with imputation, scaling, OHE (for categoricals), and a robust classifier/regressor
-
-Metrics:
-
-**Classification:** Accuracy, Precision, Recall, F1 (+ confusion matrix, classification report)
-
-**Regression:** MAE, MSE, RMSE, R²
-
-**✅ Requirement check**: Acc/Prec/Rec/F1 > 85% (for binary)
 
 **Prediction:** single-row input form using trained pipeline
 
