@@ -1,5 +1,9 @@
 # Human-face-detection
 
+Objective:
+
+Build a lightweight, CPU-friendly human face detection system that goes end-to-end—from data prep to real-time deployment—using Ultralytics/YOLO.
+
 This project has two parts:
 
 **1.Computer Vision** — Train, evaluate, export and deploy a YOLOv5n face detector (Ultralytics).
